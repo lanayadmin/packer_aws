@@ -1,0 +1,23 @@
+{
+    "variables" : {
+        "region" : "us-east-2"
+    },
+    "builders" : [
+        {
+            "type" : "amazon-ebs",
+            "profile" : "default",
+            "region" : "{{user `region`}}",
+            "instance_type" : "t2.micro",
+            "source_ami" : "ami-02236b1dbdbd92381",
+            "ssh_username" : "ec2-user",
+            "ami_name" : "template-packer",
+            "ami_description" : "template-packer",
+            "run_tags" : {
+                "Name" : "packer-builder",
+                "Tool" : "Packer",
+                "Author" : "tyler"
+            }
+        }
+    ]
+   
+}
