@@ -18,6 +18,13 @@
                 "Author" : "tyler"
             }
         }
+    ],
+
+    "provisioners": [
+	{
+	    "type": "shell",
+	    "script": "provision.sh"
+	}
     ]
    
 }
